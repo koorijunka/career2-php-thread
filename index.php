@@ -50,6 +50,7 @@ function writeData() {
             }
 
             flock($fp, LOCK_UN);
+            
         }else{
             print('ファイルロックに失敗しました');
         }
@@ -60,7 +61,7 @@ function writeData() {
     // ブラウザのリロード対策
     $redirect_url = $_SERVER['HTTP_REFERER'];
     header("Location: $redirect_url");
-    
+
     exit;
 
 }
